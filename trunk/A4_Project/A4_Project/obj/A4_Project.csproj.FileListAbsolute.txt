@@ -1,0 +1,10 @@
+D:\CCMT\A4_Project\A4_Project\obj\Debug\ResolveAssemblyReference.cache
+D:\CCMT\A4_Project\A4_Project\obj\Debug\A4_Project.frmLinkDownload.resources
+D:\CCMT\A4_Project\A4_Project\obj\Debug\A4_Project.frmLogin.resources
+D:\CCMT\A4_Project\A4_Project\obj\Debug\A4_Project.frmMain.resources
+D:\CCMT\A4_Project\A4_Project\obj\Debug\A4_Project.Properties.Resources.resources
+D:\CCMT\A4_Project\A4_Project\obj\Debug\A4_Project.csproj.GenerateResource.Cache
+D:\CCMT\A4_Project\A4_Project\bin\Debug\A4_Project.exe
+D:\CCMT\A4_Project\A4_Project\bin\Debug\A4_Project.pdb
+D:\CCMT\A4_Project\A4_Project\obj\Debug\A4_Project.exe
+D:\CCMT\A4_Project\A4_Project\obj\Debug\A4_Project.pdb
