@@ -25,5 +25,11 @@ namespace A4_Project
 
             this.BringToFront();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAbout frm = new frmAbout();
+            frm.Show();
+        }
     }
 }
