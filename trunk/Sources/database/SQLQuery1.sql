@@ -44,11 +44,12 @@ create table OpenSubject
 )
 create table Thread
 (
+	ThreadID	int identity,
 	Title		 nvarchar(50) not null,
 	Content		 nvarchar(max),
 	Time		 datetime,
-	OpenSubjectID    int not null,
-	StudentID    int not null
+	OpenSubjectID    int,
+	StudentID    int 
 )
 
 create table Deadline
@@ -64,6 +65,14 @@ create table Study
 	OpenSubjectID	int not null,
 )
 
+create table ReplyThread
+(
+	ReplyThreadID int identity,
+	Content	nvarchar(max),
+	Time	datetime, 
+	ThreadID int ,
+	StudentID	int
+)
 --primary key
 ALTER TABLE Student	 ADD CONSTRAINT PK_Student	PRIMARY KEY (StudentID)
 
@@ -73,11 +82,13 @@ ALTER TABLE Subject  ADD CONSTRAINT PK_Subject	PRIMARY KEY (SubjectID)
 
 ALTER TABLE OpenSubject  ADD CONSTRAINT PK_OpenSubject	PRIMARY KEY (OpenSubjectID)
 
-ALTER TABLE Thread   ADD CONSTRAINT  PK_Thread	PRIMARY KEY (OpenSubjectID,StudentID)
+ALTER TABLE Thread   ADD CONSTRAINT  PK_Thread	PRIMARY KEY (ThreadID)
 
 ALTER TABLE Deadline ADD CONSTRAINT PK_Deadline	PRIMARY KEY (Time,OpenSubjectID)
 
 ALTER TABLE Study    ADD CONSTRAINT PK_Study	PRIMARY KEY (StudentID,OpenSubjectID)
+
+ALTER TABLE ReplyThread   ADD CONSTRAINT PK_ReaplyThread	PRIMARY KEY (ReplyThreadID) 
 
 -- foreign key
 
@@ -89,7 +100,8 @@ ALTER TABLE Thread  ADD CONSTRAINT FK_Thread_OpenSubject FOREIGN KEY (OpenSubjec
 
 ALTER TABLE Deadline  ADD CONSTRAINT FK_Deadline_OpenSubject FOREIGN KEY (OpenSubjectID) REFERENCES OpenSubject(OpenSubjectID)
 
-
 ALTER TABLE Study  ADD CONSTRAINT FK_Study_Student FOREIGN KEY (StudentID) REFERENCES Student(StudentID)
 ALTER TABLE Study  ADD CONSTRAINT FK_Study_OpenSubject FOREIGN KEY (OpenSubjectID) REFERENCES OpenSubject(OpenSubjectID)
 
+ALTER TABLE ReplyThread	ADD CONSTRAINT FK_ReplyThread_Thread	FOREIGN KEY (ThreadID) REFERENCES	Thread(ThreadID)
+ALTER TABLE ReplyThread	ADD CONSTRAINT FK_ReplyThread_Student	FOREIGN KEY (StudentID) REFERENCES	Student(StudentID)
