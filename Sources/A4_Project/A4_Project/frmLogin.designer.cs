@@ -108,6 +108,7 @@
             this.txtbUser.Name = "txtbUser";
             this.txtbUser.Size = new System.Drawing.Size(168, 23);
             this.txtbUser.TabIndex = 0;
+            this.txtbUser.Text = "612513";
             // 
             // btnCancel
             // 

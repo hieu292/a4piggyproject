@@ -8,12 +8,18 @@ namespace BUS
 {
     public class StudentBUS
     {
+        StudentDTO sdDTO;
         public StudentBUS(StudentDTO s)
         {
+            sdDTO = s;
         }
         public bool isAtuthencation()
         {
-            return true;
+            StudentDAO s = new StudentDAO();
+            if (s.isExist(sdDTO) == true)
+                return true;
+            else
+                return false;
         }
     }
 }

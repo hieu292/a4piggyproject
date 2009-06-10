@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Text;
 using System.Data.OleDb;
 using System.IO;
+using System.ComponentModel;
+using System.Data;
 using System.Windows.Forms;
+
 
 namespace DAO
 {

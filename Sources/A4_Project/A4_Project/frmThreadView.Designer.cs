@@ -36,14 +36,14 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.lstDanhSachThread = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cmbMonHoc = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnThemThread = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.txtbNoiDungThread = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.cmbMonHoc = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -63,7 +63,7 @@
             this.groupBox1.ForeColor = System.Drawing.Color.Blue;
             this.groupBox1.Location = new System.Drawing.Point(0, 407);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1061, 173);
+            this.groupBox1.Size = new System.Drawing.Size(1028, 173);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Nội dung cần gởi:";
@@ -75,7 +75,7 @@
             this.txtbNoiDungPost.Location = new System.Drawing.Point(3, 23);
             this.txtbNoiDungPost.Multiline = true;
             this.txtbNoiDungPost.Name = "txtbNoiDungPost";
-            this.txtbNoiDungPost.Size = new System.Drawing.Size(792, 147);
+            this.txtbNoiDungPost.Size = new System.Drawing.Size(759, 147);
             this.txtbNoiDungPost.TabIndex = 5;
             this.txtbNoiDungPost.TextChanged += new System.EventHandler(this.txtbNoiDungPost_TextChanged);
             // 
@@ -84,7 +84,7 @@
             this.panel4.Controls.Add(this.btnClose);
             this.panel4.Controls.Add(this.btnPost);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(795, 23);
+            this.panel4.Location = new System.Drawing.Point(762, 23);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(263, 147);
             this.panel4.TabIndex = 4;
@@ -129,8 +129,8 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.txtbNoiDungThread);
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
-            this.splitContainer1.Size = new System.Drawing.Size(1061, 407);
-            this.splitContainer1.SplitterDistance = 353;
+            this.splitContainer1.Size = new System.Drawing.Size(1028, 407);
+            this.splitContainer1.SplitterDistance = 342;
             this.splitContainer1.TabIndex = 4;
             // 
             // lstDanhSachThread
@@ -140,7 +140,7 @@
             this.lstDanhSachThread.FormattingEnabled = true;
             this.lstDanhSachThread.Location = new System.Drawing.Point(0, 38);
             this.lstDanhSachThread.Name = "lstDanhSachThread";
-            this.lstDanhSachThread.Size = new System.Drawing.Size(353, 277);
+            this.lstDanhSachThread.Size = new System.Drawing.Size(342, 277);
             this.lstDanhSachThread.TabIndex = 2;
             // 
             // panel1
@@ -151,8 +151,28 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 317);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(353, 90);
+            this.panel1.Size = new System.Drawing.Size(342, 90);
             this.panel1.TabIndex = 1;
+            // 
+            // cmbMonHoc
+            // 
+            this.cmbMonHoc.Dock = System.Windows.Forms.DockStyle.Top;
+            this.cmbMonHoc.FormattingEnabled = true;
+            this.cmbMonHoc.Location = new System.Drawing.Point(0, 16);
+            this.cmbMonHoc.Name = "cmbMonHoc";
+            this.cmbMonHoc.Size = new System.Drawing.Size(342, 21);
+            this.cmbMonHoc.TabIndex = 5;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(71, 16);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Môn Học:";
             // 
             // btnThemThread
             // 
@@ -160,7 +180,7 @@
             this.btnThemThread.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThemThread.Location = new System.Drawing.Point(0, 52);
             this.btnThemThread.Name = "btnThemThread";
-            this.btnThemThread.Size = new System.Drawing.Size(353, 38);
+            this.btnThemThread.Size = new System.Drawing.Size(342, 38);
             this.btnThemThread.TabIndex = 0;
             this.btnThemThread.Text = "Thêm Theard";
             this.btnThemThread.UseVisualStyleBackColor = true;
@@ -171,7 +191,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(353, 38);
+            this.panel3.Size = new System.Drawing.Size(342, 38);
             this.panel3.TabIndex = 0;
             // 
             // label1
@@ -180,7 +200,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(98, 10);
+            this.label1.Location = new System.Drawing.Point(93, 10);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(156, 18);
             this.label1.TabIndex = 1;
@@ -195,7 +215,7 @@
             this.txtbNoiDungThread.Multiline = true;
             this.txtbNoiDungThread.Name = "txtbNoiDungThread";
             this.txtbNoiDungThread.ReadOnly = true;
-            this.txtbNoiDungThread.Size = new System.Drawing.Size(704, 369);
+            this.txtbNoiDungThread.Size = new System.Drawing.Size(682, 369);
             this.txtbNoiDungThread.TabIndex = 3;
             // 
             // panel2
@@ -204,7 +224,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(704, 38);
+            this.panel2.Size = new System.Drawing.Size(682, 38);
             this.panel2.TabIndex = 2;
             // 
             // label2
@@ -213,37 +233,17 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(297, 9);
+            this.label2.Location = new System.Drawing.Point(286, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Nội Dung";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label3.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(0, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 16);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Môn Học:";
-            // 
-            // cmbMonHoc
-            // 
-            this.cmbMonHoc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.cmbMonHoc.FormattingEnabled = true;
-            this.cmbMonHoc.Location = new System.Drawing.Point(0, 16);
-            this.cmbMonHoc.Name = "cmbMonHoc";
-            this.cmbMonHoc.Size = new System.Drawing.Size(353, 21);
-            this.cmbMonHoc.TabIndex = 5;
-            // 
             // frmThreadView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1061, 580);
+            this.ClientSize = new System.Drawing.Size(1028, 580);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmThreadView";
