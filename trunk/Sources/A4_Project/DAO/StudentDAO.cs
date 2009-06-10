@@ -14,7 +14,7 @@ namespace DAO
     public class StudentDAO
     {
         public string ConnectString = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = AccessMoodle.mdb";
-        public bool isExist(StudentDTO sd)
+        public int isExist(StudentDTO sd)
         {
             OleDbConnection cn = new OleDbConnection(ConnectString);
             string strSQL;
@@ -29,9 +29,12 @@ namespace DAO
             dad.Fill(dst);
 
             if (dst.Tables[0].Rows.Count == 0)
-                return false;
+                return -1;
             else
-                return true;
+            {
+                DataRow dr = dst.Tables[0].Rows[0];
+                return int.Parse(dr["StudenID"].ToString());
+            }
 
         }
     }

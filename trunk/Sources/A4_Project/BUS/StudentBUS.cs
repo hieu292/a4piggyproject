@@ -13,10 +13,18 @@ namespace BUS
         {
             sdDTO = s;
         }
-        public bool isAtuthencation()
+        public int isAtuthencation()
         {
             StudentDAO s = new StudentDAO();
-            if (s.isExist(sdDTO) == true)
+            if (s.isExist(sdDTO) > 0)
+                return s.isExist(sdDTO);
+            else
+                return -1;
+        }
+        public bool ChangePass()
+        {
+            StudentDAO s = new StudentDAO();
+            if (s.isExist(sdDTO) >0)
                 return true;
             else
                 return false;

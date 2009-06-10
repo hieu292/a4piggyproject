@@ -26,12 +26,13 @@ namespace A4_Project
                     sd.StudentID = int.Parse(txtbUser.Text);
                     sd.Password = txtbPass.Text;
                     StudentBUS ub = new StudentBUS(sd);
-                    bool kq = ub.isAtuthencation();
-                    if (kq == true)
+                    int kq = ub.isAtuthencation();
+                    if (kq >0)
                     {
                         MessageBox.Show("Dang nhap thanh cong");
                         
                         frmMain fmain = new frmMain();
+                        //MessageBox.Show(GlobalVarian.StudentID);
                        // this.Hide();
                         fmain.ShowDialog();
                         
