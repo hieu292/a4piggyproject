@@ -12,7 +12,6 @@ namespace A4_Project
         [STAThread]
         static void Main()
         {
-            int a = 10;//test
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmLogin());
