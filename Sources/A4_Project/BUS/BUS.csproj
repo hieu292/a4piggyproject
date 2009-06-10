@@ -33,8 +33,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="StudentBUS.cs" />
+    <Compile Include="DeadlineBUS.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplyThreadBUS.cs" />
+    <Compile Include="SubjectBUS.cs" />
     <Compile Include="ThreadBUS.cs" />
   </ItemGroup>
   <ItemGroup>

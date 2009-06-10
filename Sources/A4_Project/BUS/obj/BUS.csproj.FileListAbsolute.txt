@@ -1,0 +1,9 @@
+D:\CCMT\Sources\A4_Project\BUS\obj\Debug\ResolveAssemblyReference.cache
+D:\CCMT\Sources\A4_Project\BUS\bin\Debug\BUS.dll
+D:\CCMT\Sources\A4_Project\BUS\bin\Debug\BUS.pdb
+D:\CCMT\Sources\A4_Project\BUS\bin\Debug\DAO.dll
+D:\CCMT\Sources\A4_Project\BUS\bin\Debug\DTO.dll
+D:\CCMT\Sources\A4_Project\BUS\bin\Debug\DTO.pdb
+D:\CCMT\Sources\A4_Project\BUS\bin\Debug\DAO.pdb
+D:\CCMT\Sources\A4_Project\BUS\obj\Debug\BUS.dll
+D:\CCMT\Sources\A4_Project\BUS\obj\Debug\BUS.pdb
