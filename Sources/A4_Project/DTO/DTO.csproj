@@ -33,15 +33,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeadlineDTO.cs" />
-    <Compile Include="OpenSubjectDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReplyThreadDTO.cs" />
-    <Compile Include="StudentDTO.cs" />
-    <Compile Include="StudyDTO.cs" />
-    <Compile Include="SubjectDTO.cs" />
-    <Compile Include="TermDTO.cs" />
-    <Compile Include="ThreadDTO.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
