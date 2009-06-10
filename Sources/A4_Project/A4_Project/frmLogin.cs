@@ -21,7 +21,7 @@ namespace A4_Project
         {
             if (DataInvalid() != false)
             {
-                MessageBox.Show(GlobalVarian.StudentName);
+                    //MessageBox.Show(GlobalVarian.StudentName);
                     StudentDTO sd = new StudentDTO();
                     sd.StudentID = int.Parse(txtbUser.Text);
                     sd.Password = txtbPass.Text;
@@ -32,7 +32,7 @@ namespace A4_Project
                         MessageBox.Show("Dang nhap thanh cong");
                         
                         frmMain fmain = new frmMain();
-                        //MessageBox.Show(GlobalVarian.StudentID);
+                        MessageBox.Show("lay tu global:" + GlobalVarian.StudentID.ToString());
                        // this.Hide();
                         fmain.ShowDialog();
                         

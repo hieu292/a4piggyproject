@@ -23,7 +23,6 @@ namespace DAO
             OleDbDataAdapter dad;
             dad = new OleDbDataAdapter(cmd);
 
-
             DataSet dst = new DataSet();
             
             dad.Fill(dst);
@@ -33,7 +32,8 @@ namespace DAO
             else
             {
                 DataRow dr = dst.Tables[0].Rows[0];
-                return int.Parse(dr["StudenID"].ToString());
+                MessageBox.Show(dr["StudentID"].ToString());
+                return int.Parse(dr["StudentID"].ToString());
             }
 
         }
