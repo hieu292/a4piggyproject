@@ -100,6 +100,7 @@
             this.txtbPass.Name = "txtbPass";
             this.txtbPass.Size = new System.Drawing.Size(168, 23);
             this.txtbPass.TabIndex = 1;
+            this.txtbPass.UseSystemPasswordChar = true;
             // 
             // txtbUser
             // 
@@ -120,6 +121,7 @@
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Thôi";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSubmit
             // 
