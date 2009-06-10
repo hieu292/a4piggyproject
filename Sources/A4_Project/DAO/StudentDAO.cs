@@ -9,11 +9,10 @@ namespace DAO
     {
         public bool isExist(StudentDTO sd)
         {
-            AccessDatabase adb = new AccessDatabase();
             DataTable dt;
             dt = new DataTable();
             OleDbConnection cn;
-            cn = adb.ConnectionData();
+            cn = DataProvider.ConnectionData();
             string strSQL;
             strSQL = "Select gv.MaGiaoVien, gv.TenGiaoVien, mh.TenMonHoc From MonHoc mh, GiaoVien gv ,PhanCong pc   Where pc.maLop ='" + maLop + "' and mh.MaMonHoc=pc.MaMonHoc  and gv.MaGiaoVien=pc.MaGiaoVien";
             OleDbCommand cmd = new OleDbCommand(strSQL, cn);

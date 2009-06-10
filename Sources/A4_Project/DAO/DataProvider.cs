@@ -11,7 +11,7 @@ namespace DAO
     {
         public static OleDbConnection ConnectionData()
         {
-            string cnStr = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = " + Application.StartupPath + "\\ACCESSMOODLE.mdb";  
+            string cnStr = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = " + Application.StartupPath + "\\AccessMoodle.mdb";  
             OleDbConnection cn = new OleDbConnection(cnStr);
             cn.Open();
             return cn;
