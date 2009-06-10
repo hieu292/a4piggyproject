@@ -47,6 +47,5 @@ namespace DTO
             get { return _StudentID ; }
             set { _StudentID = value ; }
         }
- 
     }
 }

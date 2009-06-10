@@ -1,0 +1,5 @@
+D:\CCMT\Sources\A4_Project\DTO\obj\Debug\ResolveAssemblyReference.cache
+D:\CCMT\Sources\A4_Project\DTO\bin\Debug\DTO.dll
+D:\CCMT\Sources\A4_Project\DTO\bin\Debug\DTO.pdb
+D:\CCMT\Sources\A4_Project\DTO\obj\Debug\DTO.dll
+D:\CCMT\Sources\A4_Project\DTO\obj\Debug\DTO.pdb
