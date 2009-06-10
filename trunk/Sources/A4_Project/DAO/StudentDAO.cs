@@ -1,28 +1,38 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.ComponentModel;
+using System.Drawing;
+using System.Windows.Forms;
 using DTO;
+using System.Data.OleDb;
+using System.Data;
+
 
 namespace DAO
 {
-    class StudentDAO
+    public class StudentDAO
     {
+        public string ConnectString = "Provider = Microsoft.Jet.OLEDB.4.0; Data Source = AccessMoodle.mdb";
         public bool isExist(StudentDTO sd)
         {
-            DataTable dt;
-            dt = new DataTable();
-            OleDbConnection cn;
-            cn = DataProvider.ConnectionData();
+            OleDbConnection cn = new OleDbConnection(ConnectString);
             string strSQL;
-            strSQL = "Select gv.MaGiaoVien, gv.TenGiaoVien, mh.TenMonHoc From MonHoc mh, GiaoVien gv ,PhanCong pc   Where pc.maLop ='" + maLop + "' and mh.MaMonHoc=pc.MaMonHoc  and gv.MaGiaoVien=pc.MaGiaoVien";
+            strSQL = "Select * from Student where StudentID = " + sd.StudentID + " and Password = '" + sd.Password + "'";
             OleDbCommand cmd = new OleDbCommand(strSQL, cn);
-            cmd.Parameters.Add("@MaLop", OleDbType.Integer);
-            cmd.Parameters["@MaLop"].Value = maLop;
-            OleDbDataAdapter da;
-            da = new OleDbDataAdapter(cmd);
-            // da.FillSchema(dt, SchemaType.Source);
-            da.Fill(dt);
-            cn.Close();
+            OleDbDataAdapter dad;
+            dad = new OleDbDataAdapter(cmd);
+
+
+            DataSet dst = new DataSet();
+            
+            dad.Fill(dst);
+
+            if (dst.Tables[0].Rows.Count == 0)
+                return false;
+            else
+                return true;
+
         }
     }
 }

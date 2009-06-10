@@ -1,20 +1,19 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Data.OleDb;
 
 namespace DTO
 {
     public class OpenSubjectDTO
     {
-        public class OpenSubject
-    {
         protected  int _OpenSubjectID ;
         protected  int _TermID ;
         protected  int _SubjectID ;
-        public  OpenSubject_Info()
+        public  OpenSubjectDTO()
         {
         }
-        public  OpenSubject( int _OpenSubjectID ,int _TermID ,int _SubjectID  )
+        public  OpenSubjectDTO( int _OpenSubjectID ,int _TermID ,int _SubjectID  )
         {
            this.OpenSubjectID = _OpenSubjectID ;
            this.TermID = _TermID ;

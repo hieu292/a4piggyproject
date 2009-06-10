@@ -19,27 +19,42 @@ namespace A4_Project
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (txtbUser.Text=="")
+            if (DataInvalid() != false)
+            {
+                MessageBox.Show(GlobalVarian.StudentName);
+                    StudentDTO sd = new StudentDTO();
+                    sd.StudentID = int.Parse(txtbUser.Text);
+                    sd.Password = txtbPass.Text;
+                    StudentBUS ub = new StudentBUS(sd);
+                    bool kq = ub.isAtuthencation();
+                    if (kq == true)
+                    {
+                        MessageBox.Show("Dang nhap thanh cong");
+                        
+                        frmMain fmain = new frmMain();
+                       // this.Hide();
+                        fmain.ShowDialog();
+                        
+
+                    }
+                    else
+                        MessageBox.Show("Dang nhap LOI");
+
+            }
+        }
+        private bool DataInvalid()
+        {
+            if (txtbUser.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập Username!");
+                return false;
             }
             if (txtbPass.Text == "")
             {
                 MessageBox.Show("Bạn chưa nhập Password!");
+                return false;
             }
-            else
-            {
-                    StudentDTO sd = new StudentDTO();
-                    sd.Name = txtbUser.Text;
-                    sd.Password = txtbPass.Text;
-                    StudentBUS ub = new StudentBO(sd);
-                    bool kq = ub.isAtuthencation();
-                if(kq==true)
-                    MessageBox.Show("Dang nhap thanh cong");
-                else
-                    MessageBox.Show("Dang nhap LOI");
-
-            }
+            return true;
         }
     }
 }

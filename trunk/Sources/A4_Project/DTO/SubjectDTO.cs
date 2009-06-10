@@ -6,7 +6,8 @@ namespace DTO
 {
     public class SubjectDTO
     {
-         protected  string _Name ;
+        protected  string _Name ;
+        protected int _SubjectID;
         public  SubjectDTO()
         {
         }
