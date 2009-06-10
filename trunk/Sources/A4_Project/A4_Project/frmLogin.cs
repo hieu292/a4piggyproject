@@ -21,25 +21,28 @@ namespace A4_Project
         {
             if (DataInvalid() != false)
             {
-                    //MessageBox.Show(GlobalVarian.StudentName);
                     StudentDTO sd = new StudentDTO();
                     sd.StudentID = int.Parse(txtbUser.Text);
                     sd.Password = txtbPass.Text;
                     StudentBUS ub = new StudentBUS(sd);
                     int kq = ub.isAtuthencation();
+                    GlobalVarian.StudentID = kq;
                     if (kq >0)
                     {
-                        MessageBox.Show("Dang nhap thanh cong");
+                        MessageBox.Show("Xin chào, bạn đã đăng nhập thành công!");
                         
-                        frmMain fmain = new frmMain();
-                        MessageBox.Show("lay tu global:" + GlobalVarian.StudentID.ToString());
+                        //frmMain fmain = new frmMain();
+                        //MessageBox.Show("lay tu global:" + GlobalVarian.StudentID.ToString());
                        // this.Hide();
-                        fmain.ShowDialog();
+                        //fmain.ShowDialog();
+                      //frmChangePassword cp = new frmChangePassword();
+                        //cp.Show();
+                        frmNewThread a = new frmNewThread();
+                        a.ShowDialog();
                         
-
                     }
                     else
-                        MessageBox.Show("Dang nhap LOI");
+                        MessageBox.Show("Lỗi đăng nhập, mời bạn kiểm tra lại tài khoản!");
 
             }
         }
@@ -56,6 +59,11 @@ namespace A4_Project
                 return false;
             }
             return true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

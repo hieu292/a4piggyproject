@@ -15,17 +15,22 @@ namespace BUS
         }
         public int isAtuthencation()
         {
-            StudentDAO s = new StudentDAO();
-            if (s.isExist(sdDTO) > 0)
-                return s.isExist(sdDTO);
+            StudentDAO s = new StudentDAO(sdDTO);
+            if (s.isExist() > 0)
+                return s.isExist();
             else
                 return -1;
         }
-        public bool ChangePass()
+        public bool ChangePass(string newpass)
         {
-            StudentDAO s = new StudentDAO();
-            if (s.isExist(sdDTO) >0)
-                return true;
+           
+            if (this.sdDTO.StudentID > 0)
+            {
+                StudentDAO s = new StudentDAO(sdDTO);
+                if (s.ChangePassword(newpass) == true)
+                    return true;
+                return false;
+            }
             else
                 return false;
         }

@@ -113,6 +113,7 @@
             this.MinimizeBox = false;
             this.Name = "frmNewThread";
             this.Text = "Thêm Thread";
+            this.Load += new System.EventHandler(this.frmNewThread_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

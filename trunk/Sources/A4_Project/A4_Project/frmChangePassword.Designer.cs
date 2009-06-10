@@ -87,7 +87,8 @@
             this.txtbOldPass.Location = new System.Drawing.Point(211, 71);
             this.txtbOldPass.Name = "txtbOldPass";
             this.txtbOldPass.Size = new System.Drawing.Size(180, 23);
-            this.txtbOldPass.TabIndex = 2;
+            this.txtbOldPass.TabIndex = 1;
+            this.txtbOldPass.UseSystemPasswordChar = true;
             // 
             // txtbNewPass
             // 
@@ -95,20 +96,22 @@
             this.txtbNewPass.Name = "txtbNewPass";
             this.txtbNewPass.Size = new System.Drawing.Size(180, 23);
             this.txtbNewPass.TabIndex = 2;
+            this.txtbNewPass.UseSystemPasswordChar = true;
             // 
             // txtbConPass
             // 
             this.txtbConPass.Location = new System.Drawing.Point(211, 163);
             this.txtbConPass.Name = "txtbConPass";
             this.txtbConPass.Size = new System.Drawing.Size(180, 23);
-            this.txtbConPass.TabIndex = 2;
+            this.txtbConPass.TabIndex = 3;
+            this.txtbConPass.UseSystemPasswordChar = true;
             // 
             // btnDongY
             // 
             this.btnDongY.Location = new System.Drawing.Point(115, 223);
             this.btnDongY.Name = "btnDongY";
             this.btnDongY.Size = new System.Drawing.Size(80, 35);
-            this.btnDongY.TabIndex = 3;
+            this.btnDongY.TabIndex = 4;
             this.btnDongY.Text = "Đồng Ý";
             this.btnDongY.UseVisualStyleBackColor = true;
             this.btnDongY.Click += new System.EventHandler(this.btnDongY_Click);
@@ -118,9 +121,10 @@
             this.btnThoi.Location = new System.Drawing.Point(237, 223);
             this.btnThoi.Name = "btnThoi";
             this.btnThoi.Size = new System.Drawing.Size(80, 35);
-            this.btnThoi.TabIndex = 3;
+            this.btnThoi.TabIndex = 5;
             this.btnThoi.Text = "Thôi";
             this.btnThoi.UseVisualStyleBackColor = true;
+            this.btnThoi.Click += new System.EventHandler(this.btnThoi_Click);
             // 
             // label5
             // 
