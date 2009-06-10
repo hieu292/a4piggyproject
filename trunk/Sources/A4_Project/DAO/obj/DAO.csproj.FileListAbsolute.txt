@@ -1,7 +1,0 @@
-D:\CCMT\Sources\A4_Project\DAO\obj\Debug\ResolveAssemblyReference.cache
-D:\CCMT\Sources\A4_Project\DAO\bin\Debug\DAO.dll
-D:\CCMT\Sources\A4_Project\DAO\bin\Debug\DAO.pdb
-D:\CCMT\Sources\A4_Project\DAO\bin\Debug\DTO.dll
-D:\CCMT\Sources\A4_Project\DAO\bin\Debug\DTO.pdb
-D:\CCMT\Sources\A4_Project\DAO\obj\Debug\DAO.dll
-D:\CCMT\Sources\A4_Project\DAO\obj\Debug\DAO.pdb
